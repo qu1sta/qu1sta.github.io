@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on メモを書いておくページ</title>
+    <link>https://tkconq.github.io/post/</link>
+    <description>Recent content in Posts on メモを書いておくページ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 08 Aug 2019 23:04:08 +0900</lastBuildDate>
+    
+	<atom:link href="https://tkconq.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo &#43; GitHub Pagesでブログ作成した</title>
+      <link>https://tkconq.github.io/post/20190808/</link>
+      <pubDate>Thu, 08 Aug 2019 23:04:08 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20190808/</guid>
+      <description>はじめに 普段からMarkdownで文章を書くことが多いため、blogもMarkdownで書きたいなと思った。 候補はいくつかあったが、とりあえずそこそこ王道であるHugoとGitHubを組み合わせて使うことにした
+Hugoとは Hugoは静的サイトジェネレーターである。記事をMarkdownで書くことができるのが魅力である。 記事の作成は以下のコマンドで行う
+hugo new posts/{title}  以下のコマンドを実行し、localにサーバーを立てて出力を確認しながら書いていく。
+hugo server  コンパイルは以下のコマンドで実行し、publicディレクトリ内に結果が出力される。
+hugo  なお、私はコンパイル自体は自動化しているのでこのコマンドをうつことはない
+GitHub Pagesとは GitHubの提供するWeb hosting serviceである。 GitにCommitするだけでWebが公開できるのである。なにそれ便利。 hugoで作成したpublicディレクトリをアップしてやればよい。 こちらも自動化しているので特に意識してはいない。
+時間があるときにここらへんの詳しい話をしたいと思う。</description>
+    </item>
+    
+  </channel>
+</rss>
