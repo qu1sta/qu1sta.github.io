@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.56.3" />
 
-  <title>Posts &middot; メモを書いておくページ</title>
+  <title>Circle CI &middot; メモを書いておくページ</title>
 
   
   
@@ -39,9 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="メモを書いておくページ"
-    href='https://tkconq.github.io/post/index.xml' />
   
 
   
@@ -116,11 +113,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://tkconq.github.io/post/index.xml'><i
-          class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -219,21 +211,123 @@
 
 
 <div class="header">
-  <h1>Posts</h1>
+  <h1>Circle CI</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  
-  <h2>2019</h2>
-  <ul>
-  
-    <li><time>09 Aug 2019, 08:50</time> - <a href="https://tkconq.github.io/post/20190809/">Circle CI</a></li>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Aug 2019, 08:50</time>
+  </div>
 
   
-    <li><time>08 Aug 2019, 23:04</time> - <a href="https://tkconq.github.io/post/20190808/">Hugo &#43; GitHub Pagesでブログ作成した</a></li>
 
   
-  </ul>
+
   
+
+</div>
+
+  
+
+<h2 id="circleciとは">CircleCIとは</h2>
+
+<p>クラウドのCI/CDのデファクトといっていいもの。GitHubと連携できるので相性が良い。（とはいえ今どきのCI/CDツールなら大抵連携できる)
+<figure class="center">
+    <img src="https://tkconq.github.io/images/circleci_image.png" width="320"/> <figcaption>
+            <h4>Circle CIのイメージ</h4>
+        </figcaption>
+</figure>
+
+URL: <a href="https://circleci.com/">https://circleci.com/</a></p>
+
+<p>blog運営に使うだけであれば無料枠で十分。
+<code>config</code>の設定は以下の通り。
+<code>themes</code>を<code>submodule</code>で管理していたところ、circleci側でうまく<code>git clone</code>できずに少しハマった。とりあえず本体で管理する解決策で代用。特にテーマ変える予定もいまのところないしね。</p>
+
+<pre><code>version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+
+    steps:
+      - checkout
+
+      - run:
+          name: &quot;Setting for Git&quot;
+          command: |
+            git config --global user.name &quot;&lt;yourname&gt;&quot;
+            git config --global user.email &quot;&lt;yourname&gt;@gmail.com&quot;
+
+      - run:
+          name: &quot;Get GitHub repository&quot;
+          command: git clone git@github.com:&lt;yourname&gt;/blog.git
+
+      - run:
+          name: &quot;Build &amp; Push&quot;
+          command: |
+            git clone --recursive git@github.com:&lt;yourname&gt;/&lt;yourname&gt;.github.io.git public
+            hugo
+            cd public
+            ls
+            git add .
+            echo &quot;git status&quot;
+            git status
+            git commit -m &quot;rebuilding site `date '+%Y-%m-%d'`&quot;
+            git push origin master
+
+</code></pre>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://tkconq.github.io/post/20190808/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://tkconq.github.io/post/20190808/">Hugo &#43; GitHub Pagesでブログ作成した</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'Your Disqus shortname';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
 </div>
 
 </div>
