@@ -6,10 +6,19 @@
     <description>Recent content on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 09 Aug 2019 08:50:16 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2019 16:29:14 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://tkconq.github.io/about/</link>
+      <pubDate>Fri, 09 Aug 2019 16:29:14 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/about/</guid>
+      <description>About me  Skills  Android Software Development Machine Learning Python / Kotlin / C# / Java  Public 機械学習でできることを解説するために作成しました。 手書きした数字の識別を行います。  数字識別</description>
+    </item>
     
     <item>
       <title>Circle CI</title>
