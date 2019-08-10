@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.56.3" />
 
-  <title>Circle CI &middot; メモを書いておくページ</title>
+  <title>Docker/Kubernetes実践コンテナ入門 &middot; メモを書いておくページ</title>
 
   
   
@@ -205,7 +205,7 @@
 
 
 <div class="header">
-  <h1>Circle CI</h1>
+  <h1>Docker/Kubernetes実践コンテナ入門</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -214,7 +214,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Aug 2019, 08:50</time>
+    <time>10 Aug 2019, 09:00</time>
   </div>
 
   
@@ -227,66 +227,50 @@
 
   
 
-<h2 id="circleciとは">CircleCIとは</h2>
+<h1 id="はじめに">はじめに</h1>
 
-<p>クラウドのCI/CDのデファクトといっていいもの。GitHubと連携できるので相性が良い。（とはいえ今どきのCI/CDツールなら大抵連携できる)
-<figure class="center">
-    <img src="https://tkconq.github.io/images/circleci_image.png" width="320"/> <figcaption>
-            <h4>Circle CIのイメージ</h4>
-        </figcaption>
+<p>Docker及びKubernetesについて断片的な知識しかないため、この本を読むことにした</p>
+
+<p><figure class="center">
+    <img src="https://tkconq.github.io/images/docker_k8s.jpg" width="180"/> 
 </figure>
 
-URL: <a href="https://circleci.com/">https://circleci.com/</a></p>
+<a href="https://www.amazon.co.jp/dp/4297100339">Docker/Kubernetes 実践コンテナ開発入門</a></p>
 
-<p>blog運営に使うだけであれば無料枠で十分。
-<code>config</code>の設定は以下の通り。
-<code>themes</code>を<code>submodule</code>で管理していたところ、circleci側でうまく<code>git clone</code>できずに少しハマった。とりあえず本体で管理する解決策で代用。特にテーマ変える予定もいまのところないしね。</p>
+<h2 id="目次">目次</h2>
 
-<pre><code>version: 2
-jobs:
-  build:
-    docker:
-      - image: cibuilds/hugo:latest
+<p>目次はこんな感じ。</p>
 
-    steps:
-      - checkout
+<ol>
+<li>Dockerの基礎</li>
+<li>Dockerコンテナのデプロイ</li>
+<li>実践的なコンテナの構築とデプロイ</li>
+<li>Swarmによる実践的なアプリケーション構築</li>
+<li>Kubernetes入門</li>
+<li>Kubernetesのデプロイ・クラスタ構築</li>
+<li>Kubernetesの発展的な利用</li>
+<li>コンテナの運用</li>
+<li>より軽量なDockerイメージを作る</li>
+<li>Dockerの様々な活用方法</li>
+</ol>
 
-      - run:
-          name: &quot;Setting for Git&quot;
-          command: |
-            git config --global user.name &quot;&lt;yourname&gt;&quot;
-            git config --global user.email &quot;&lt;yourname&gt;@gmail.com&quot;
+<h2 id="進捗">進捗</h2>
 
-      - run:
-          name: &quot;Get GitHub repository&quot;
-          command: git clone git@github.com:&lt;yourname&gt;/blog.git
-
-      - run:
-          name: &quot;Build &amp; Push&quot;
-          command: |
-            git clone --recursive git@github.com:&lt;yourname&gt;/&lt;yourname&gt;.github.io.git public
-            hugo
-            cd public
-            ls
-            git add .
-            git status
-            git commit -m &quot;rebuilding site `date '+%Y-%m-%d'`&quot;
-            git push origin master
-
-</code></pre>
+<p>2章まで読み終わったとこ。実際に手を動かすことが多いので勉強にはなっている。この休みを利用して一通り終わらせたいと思っている。
+やりたいことはたくさんあるので計画的に進めていきたい。</p>
 
 
   
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://tkconq.github.io/post/20190808/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://tkconq.github.io/post/20190809/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://tkconq.github.io/post/20190808/">Hugo &#43; GitHub Pagesでブログ作成した</a>
+      <a href="https://tkconq.github.io/post/20190809/">Circle CI</a>
     </nav>
     
   </div>
@@ -295,14 +279,8 @@ jobs:
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://tkconq.github.io/post/20190810/">Docker/Kubernetes実践コンテナ入門</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://tkconq.github.io/post/20190810/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
