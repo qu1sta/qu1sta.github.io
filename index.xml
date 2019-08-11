@@ -6,10 +6,22 @@
     <description>Recent content on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 10 Aug 2019 09:00:34 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 12:32:54 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>お盆休みにやること</title>
+      <link>https://tkconq.github.io/post/20190811/</link>
+      <pubDate>Sun, 11 Aug 2019 12:32:54 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20190811/</guid>
+      <description>はじめに 10連休ほどもらえたのでこの休み中にやることをまとめる
+英語 しばらく休んでいたので基礎から。来月にはSkype英会話を再開できるレベルにはしておきたい。 一応仕事でまた使うことになりそうなのでヤバい。
+ 英語耳 どんどん話すための瞬間英作文 スタディサプリEnglish  技術書 直近の記事で書いたけど、k8sの教科書を学ぶ。 勉強のモチベーションが下がっているのは、直近仕事で使わないからかな。
+ Docker/Kubernetes実践コンテナ開発入門   そもそも 最近新しいことを学ぶ速度が落ちている気がする。 歳のせいか、なかなか頭に残らない。 もともと物覚えは悪い方なので学ぶ時間を増やさなきゃと思いつつ、なかなか重い腰が上がらない。 20代も残り少なくなってきたので、悔いの残らない人生にしないとな。</description>
+    </item>
     
     <item>
       <title>Docker/Kubernetes実践コンテナ入門</title>
