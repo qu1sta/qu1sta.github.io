@@ -6,10 +6,21 @@
     <description>Recent content on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 12 Aug 2019 14:59:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 11:02:18 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>実家のWindowsが遅い</title>
+      <link>https://tkconq.github.io/post/20190813/</link>
+      <pubDate>Tue, 13 Aug 2019 11:02:18 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20190813/</guid>
+      <description>はじめに 実家に以前買ってあげたノートパソコンがめちゃくちゃ重い。 ディスク使用量が100%を常に出しており、これはヤバいと思ったので色々と対策。
+溜まっているWindows Updateを順次かける windows updateが無視され続けており、たまっていたのでたくさんかける。 途中で常にupdateが失敗するようになってしまい、Windowsの初期化をしてやり直す。 が、だめ。
+Windows 10　を最新にする Windows自体を手動アップデート。うまくいくかはわからないので様子見中</description>
+    </item>
     
     <item>
       <title>帰省</title>
