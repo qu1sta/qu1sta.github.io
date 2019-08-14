@@ -6,10 +6,22 @@
     <description>Recent content in Posts on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 13 Aug 2019 11:02:18 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 11:09:09 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>シェルとか</title>
+      <link>https://tkconq.github.io/post/20190814/</link>
+      <pubDate>Wed, 14 Aug 2019 11:09:09 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20190814/</guid>
+      <description>はじめに シェル遍歴についてのメモ
+bash デフォルトのshell。（拡張すればよいのだが）ところどころ不便なこともあってあまり使わなかった。
+fish 色々と便利だったが、bashと完全互換しているわけではなく、一部コマンドが使えなかったのでやめた。
+zsh oh-my-zshを入れて使っていた。一時期fishにしていたが結局これにもどってきた。</description>
+    </item>
     
     <item>
       <title>実家のWindowsが遅い</title>
