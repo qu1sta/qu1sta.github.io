@@ -6,10 +6,23 @@
     <description>Recent content on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 14 Aug 2019 11:09:09 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 15 Aug 2019 20:28:10 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>自作PC</title>
+      <link>https://tkconq.github.io/post/20190915/</link>
+      <pubDate>Thu, 15 Aug 2019 20:28:10 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20190915/</guid>
+      <description>自作PC パソコンを買い換える時期は一般にどんなものなのか。 一般的に5年くらいもつらしいが、私の場合は1年ごとに変えている。 最近の流行りを調べてみた。
+自作P CPU 今はRyzen一色だろう。価格comでもTOP3はRyzenである。 一番人気はRyzen 9 3900X。12コアの3.8GHzである。 比較対象のCore i9 9900Kの２倍の性能で価格が同じ。 最近はAMDの圧勝だね。
+GPU GeForceとRadeonがいい試合をしているらしい。 2080は大体7万5千。いつもグラボは３万前後を買っているのでこれは高い。 二番人気はRadeon RX Vega 64で３万５千。 今使っているのが1070なのでスペック的にはそんなに変わらず。
+メモリ F4-3600C19D-32GSXWB [DDR4 PC4-28800 16GB 2枚組]が2万円。 これは安い。私が作ったときの半額くらいか。 普通に欲しい。
+SSD MX500が7000円。安い。 そもそも128GBでも困っていないのだが。 最近はPCIeスロットに指すタイプも出ており、1TBで1万2千円。 どれだけ早くなるんだろうか。欲しい。</description>
+    </item>
     
     <item>
       <title>シェルとか</title>
