@@ -6,10 +6,19 @@
     <description>Recent content on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 16 Aug 2019 22:56:09 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 17 Aug 2019 18:55:41 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>３章’実践的なコンテナの構築とデプロイ</title>
+      <link>https://tkconq.github.io/post/20190917/</link>
+      <pubDate>Sat, 17 Aug 2019 18:55:41 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20190917/</guid>
+      <description> アプリケーションとコンテナの粒度  1コンテナ1アプリケーションは間違い Each container should have only one concern  コンテナのポータビリティ  ポータビリティは完璧ではない Kernel・アーキテクチャの違いの影響あり ダイナミックリング multi-stage builds という仕組みあり  Dockerフレンドリーなアプリケーション  実行時引数として値を渡す 実行時引数が増えるとマッピング処理が増えたりCMDが複雑になる 設定ファイルとして渡す 昔流行った方法 特定の環境の設定ファイルをDockerイメージに閉じ込めるとポータビリティが狭まる。 アプリケーションの挙動を環境変数で制御する ちょっとした値の変更でDockerイメージをビルドする必要なし 設定ファイルに環境変数を埋め込む SpringFrameworkのpropertiesファイルとか。  永続化データをどう扱うか  Data Volume Dockerコンテナ内のディレクトリを永続化するための仕組み Data Volumeコンテナ データを持つだためだけのコンテナ  コンテナ配置戦略  Docker Swarm 複数のDockerホストを束ねてクラスタ化するためのツール  Compose: 複数のコンテナを使うDockerアプリの管理 Swarm: クラスタの構築や管理 Service: Swarm前提。クラスタ内のServiceを管理 Stack: Swarm前提。複数のServiceをまとめたアプリ全体の管理  Service シングルDockerホストであればdocker container runでやってた Swarmの場合はアプリを構成する一部のコンテナを制御するため単位 Stack 複数のServiceをグルーピングした単位   </description>
+    </item>
     
     <item>
       <title>KeyBoard</title>

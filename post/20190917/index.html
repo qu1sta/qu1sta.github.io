@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.57.1" />
 
-  <title>メモを書いておくページ</title>
+  <title>３章’実践的なコンテナの構築とデプロイ &middot; メモを書いておくページ</title>
 
   
   
@@ -39,9 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="メモを書いておくページ"
-    href='https://tkconq.github.io/index.xml' />
   
 
   
@@ -110,11 +107,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://tkconq.github.io/index.xml'><i
-          class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -213,17 +205,12 @@
 
 
 <div class="header">
-  <h1>メモを書いておくページ</h1>
-  <h2>技術的に気になることとか、勉強の記録とか</h2>
+  <h1>３章’実践的なコンテナの構築とデプロイ</h1>
+  <h2></h2>
 </div>
-
 <div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://tkconq.github.io/post/">Posts</a></h2>
 
-    <div class="post-meta">
+  <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
@@ -238,18 +225,106 @@
 
 </div>
 
-  </header>
+  <ul>
+<li>アプリケーションとコンテナの粒度
 
-  <p>
-  
-  </p>
+<ul>
+<li>1コンテナ1アプリケーションは間違い</li>
+<li>Each container should have only one concern</li>
+</ul></li>
+<li>コンテナのポータビリティ
+
+<ul>
+<li>ポータビリティは完璧ではない</li>
+<li>Kernel・アーキテクチャの違いの影響あり</li>
+<li>ダイナミックリング</li>
+<li>multi-stage builds という仕組みあり</li>
+</ul></li>
+<li>Dockerフレンドリーなアプリケーション
+
+<ul>
+<li>実行時引数として値を渡す</li>
+<li>実行時引数が増えるとマッピング処理が増えたりCMDが複雑になる</li>
+<li>設定ファイルとして渡す</li>
+<li>昔流行った方法</li>
+<li>特定の環境の設定ファイルをDockerイメージに閉じ込めるとポータビリティが狭まる。</li>
+<li>アプリケーションの挙動を環境変数で制御する</li>
+<li>ちょっとした値の変更でDockerイメージをビルドする必要なし</li>
+<li>設定ファイルに環境変数を埋め込む</li>
+<li>SpringFrameworkのpropertiesファイルとか。</li>
+</ul></li>
+<li>永続化データをどう扱うか
+
+<ul>
+<li>Data Volume</li>
+<li>Dockerコンテナ内のディレクトリを永続化するための仕組み</li>
+<li>Data Volumeコンテナ</li>
+<li>データを持つだためだけのコンテナ</li>
+</ul></li>
+<li>コンテナ配置戦略
+
+<ul>
+<li>Docker Swarm</li>
+<li>複数のDockerホストを束ねてクラスタ化するためのツール
+
+<ul>
+<li>Compose: 複数のコンテナを使うDockerアプリの管理</li>
+<li>Swarm: クラスタの構築や管理</li>
+<li>Service: Swarm前提。クラスタ内のServiceを管理</li>
+<li>Stack: Swarm前提。複数のServiceをまとめたアプリ全体の管理</li>
+</ul></li>
+<li>Service</li>
+<li>シングルDockerホストであれば<code>docker container run</code>でやってた</li>
+<li>Swarmの場合はアプリを構成する一部のコンテナを制御するため単位</li>
+<li>Stack</li>
+<li>複数のServiceをグルーピングした単位</li>
+</ul></li>
+</ul>
+
 
   
-</article>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://tkconq.github.io/post/20190916/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://tkconq.github.io/post/20190916/">KeyBoard</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
 
   
+<div id="disqus_thread"></div>
+<script type="text/javascript">
 
-  
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'Your Disqus shortname';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
 
 
 </div>
