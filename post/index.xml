@@ -6,10 +6,19 @@
     <description>Recent content in Posts on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 17 Aug 2019 18:55:41 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 19 Aug 2019 23:18:56 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My work</title>
+      <link>https://tkconq.github.io/post/20190919/</link>
+      <pubDate>Mon, 19 Aug 2019 23:18:56 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20190919/</guid>
+      <description>Introduction My job is a system engineer. I work in Tokyo on weekdays. I often create some software using some programming languages. I usually use Python, Java and so on. However, I&amp;rsquo;ve not made software recently.</description>
+    </item>
     
     <item>
       <title>３章’実践的なコンテナの構築とデプロイ</title>
