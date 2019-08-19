@@ -250,6 +250,39 @@
   
     <article>
   <header>
+    <h2><a href="https://tkconq.github.io/post/20190918/">Pokemon Card</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Aug 2019, 21:47</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Pokemon Card I have enjoyed Pokemon card since one year ago. I like the card game because the card design is very cute. I play the game with my friends every Saturday. Today, a tournament is held to decide the World Champion in America. I am watching the tournament. The players play very technical. I think that I need the skill. So I have to practice the card more than ever before.
+  </p>
+
+  
+  <footer>
+    <a href="https://tkconq.github.io/post/20190918/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://tkconq.github.io/post/20190917/">３章’実践的なコンテナの構築とデプロイ</a></h2>
 
     <div class="post-meta">
@@ -492,41 +525,6 @@ Windows 10　を最新にする Windows自体を手動アップデート。う�
  Dockerの基礎 Dockerコンテナのデプロイ 実践的なコンテナの構築とデプロイ Swarmによる実践的なアプリケーション構築 Kubernetes入門 Kubernetesのデプロイ・クラスタ構築 Kubernetesの発展的な利用 コンテナの運用 より軽量なDockerイメージを作る Dockerの様々な活用方法  進捗 2章まで読み終わったとこ。実際に手を動かすことが多いので勉強にはなっている。この休みを利用して一通り終わらせたいと思っている。 やりたいことはたくさんあるので計画的に進めていきたい。
   </p>
 
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://tkconq.github.io/post/20190809/">Circle CI</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>09 Aug 2019, 08:50</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  CircleCIとは クラウドのCI/CDのデファクトといっていいもの。GitHubと連携できるので相性が良い。（とはいえ今どきのCI/CDツールなら大抵連携できる)  Circle CIのイメージ   URL: https://circleci.com/
-blog運営に使うだけであれば無料枠で十分。 configの設定は以下の通り。 themesをsubmoduleで管理していたところ、circleci側でうまくgit cloneできずに少しハマった。とりあえず本体で管理する解決策で代用。特にテーマ変える予定もいまのところないしね。
-version: 2 jobs: build: docker: - image: cibuilds/hugo:latest steps: - checkout - run: name: &quot;Setting for Git&quot; command: | git config --global user.name &quot;&lt;yourname&gt;&quot; git config --global user.email &quot;&lt;yourname&gt;@gmail.com&quot; - run: name: &quot;Get GitHub repository&quot; command: git clone git@github.com:&lt;yourname&gt;/blog.git - run: name: &quot;Build &amp; Push&quot; command: | git clone --recursive git@github.com:&lt;yourname&gt;/&lt;yourname&gt;.github.io.git public hugo cd public ls git add .
-  </p>
-
-  
-  <footer>
-    <a href="https://tkconq.github.io/post/20190809/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
   
 </article>
 
