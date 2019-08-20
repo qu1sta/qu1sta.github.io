@@ -13,47 +13,47 @@
     
     <item>
       <title>My work</title>
-      <link>https://tkconq.github.io/post/20190919/</link>
+      <link>https://tkconq.github.io/post/20190819/</link>
       <pubDate>Mon, 19 Aug 2019 23:18:56 +0900</pubDate>
       
-      <guid>https://tkconq.github.io/post/20190919/</guid>
+      <guid>https://tkconq.github.io/post/20190819/</guid>
       <description>Introduction My job is a system engineer. I work in Tokyo on weekdays. I often create some software using some programming languages. I usually use Python, Java and so on. However, I&amp;rsquo;ve not made software recently.</description>
     </item>
     
     <item>
       <title>Pokemon Card</title>
-      <link>https://tkconq.github.io/post/20190918/</link>
+      <link>https://tkconq.github.io/post/20190818/</link>
       <pubDate>Sun, 18 Aug 2019 21:47:02 +0900</pubDate>
       
-      <guid>https://tkconq.github.io/post/20190918/</guid>
+      <guid>https://tkconq.github.io/post/20190818/</guid>
       <description>Pokemon Card I have enjoyed Pokemon card since one year ago. I like the card game because the card design is very cute. I play the game with my friends every Saturday. Today, a tournament is held to decide the World Champion in America. I am watching the tournament. The players play very technical. I think that I need the skill. So I have to practice the card more than ever before.</description>
     </item>
     
     <item>
       <title>３章’実践的なコンテナの構築とデプロイ</title>
-      <link>https://tkconq.github.io/post/20190917/</link>
+      <link>https://tkconq.github.io/post/20190817/</link>
       <pubDate>Sat, 17 Aug 2019 18:55:41 +0900</pubDate>
       
-      <guid>https://tkconq.github.io/post/20190917/</guid>
+      <guid>https://tkconq.github.io/post/20190817/</guid>
       <description> アプリケーションとコンテナの粒度  1コンテナ1アプリケーションは間違い Each container should have only one concern  コンテナのポータビリティ  ポータビリティは完璧ではない Kernel・アーキテクチャの違いの影響あり ダイナミックリング multi-stage builds という仕組みあり  Dockerフレンドリーなアプリケーション  実行時引数として値を渡す 実行時引数が増えるとマッピング処理が増えたりCMDが複雑になる 設定ファイルとして渡す 昔流行った方法 特定の環境の設定ファイルをDockerイメージに閉じ込めるとポータビリティが狭まる。 アプリケーションの挙動を環境変数で制御する ちょっとした値の変更でDockerイメージをビルドする必要なし 設定ファイルに環境変数を埋め込む SpringFrameworkのpropertiesファイルとか。  永続化データをどう扱うか  Data Volume Dockerコンテナ内のディレクトリを永続化するための仕組み Data Volumeコンテナ データを持つだためだけのコンテナ  コンテナ配置戦略  Docker Swarm 複数のDockerホストを束ねてクラスタ化するためのツール  Compose: 複数のコンテナを使うDockerアプリの管理 Swarm: クラスタの構築や管理 Service: Swarm前提。クラスタ内のServiceを管理 Stack: Swarm前提。複数のServiceをまとめたアプリ全体の管理  Service シングルDockerホストであればdocker container runでやってた Swarmの場合はアプリを構成する一部のコンテナを制御するため単位 Stack 複数のServiceをグルーピングした単位   </description>
     </item>
     
     <item>
       <title>KeyBoard</title>
-      <link>https://tkconq.github.io/post/20190916/</link>
+      <link>https://tkconq.github.io/post/20190816/</link>
       <pubDate>Fri, 16 Aug 2019 22:56:09 +0900</pubDate>
       
-      <guid>https://tkconq.github.io/post/20190916/</guid>
+      <guid>https://tkconq.github.io/post/20190816/</guid>
       <description>はじめに USキーボードにした。
 Introduction I bought US keyboard. It is first time for me to use US Keyboard.</description>
     </item>
     
     <item>
       <title>自作PC</title>
-      <link>https://tkconq.github.io/post/20190915/</link>
+      <link>https://tkconq.github.io/post/20190815/</link>
       <pubDate>Thu, 15 Aug 2019 20:28:10 +0900</pubDate>
       
-      <guid>https://tkconq.github.io/post/20190915/</guid>
+      <guid>https://tkconq.github.io/post/20190815/</guid>
       <description>自作PC パソコンを買い換える時期は一般にどんなものなのか。 一般的に5年くらいもつらしいが、私の場合は1年ごとに変えている。 最近の流行りを調べてみた。
 自作P CPU 今はRyzen一色だろう。価格comでもTOP3はRyzenである。 一番人気はRyzen 9 3900X。12コアの3.8GHzである。 比較対象のCore i9 9900Kの２倍の性能で価格が同じ。 最近はAMDの圧勝だね。
 GPU GeForceとRadeonがいい試合をしているらしい。 2080は大体7万5千。いつもグラボは３万前後を買っているのでこれは高い。 二番人気はRadeon RX Vega 64で３万５千。 今使っているのが1070なのでスペック的にはそんなに変わらず。
