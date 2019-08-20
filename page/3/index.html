@@ -221,13 +221,13 @@
   
     <article>
   <header>
-    <h2><a href="https://tkconq.github.io/post/20190815/">自作PC</a></h2>
+    <h2><a href="https://tkconq.github.io/post/20190810/">Docker/Kubernetes実践コンテナ入門</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Aug 2019, 20:28</time>
+    <time>10 Aug 2019, 09:00</time>
   </div>
 
   
@@ -241,11 +241,10 @@
   </header>
 
   <p>
-  自作PC パソコンを買い換える時期は一般にどんなものなのか。 一般的に5年くらいもつらしいが、私の場合は1年ごとに変えている。 最近の流行りを調べてみた。
-自作P CPU 今はRyzen一色だろう。価格comでもTOP3はRyzenである。 一番人気はRyzen 9 3900X。12コアの3.8GHzである。 比較対象のCore i9 9900Kの２倍の性能で価格が同じ。 最近はAMDの圧勝だね。
-GPU GeForceとRadeonがいい試合をしているらしい。 2080は大体7万5千。いつもグラボは３万前後を買っているのでこれは高い。 二番人気はRadeon RX Vega 64で３万５千。 今使っているのが1070なのでスペック的にはそんなに変わらず。
-メモリ F4-3600C19D-32GSXWB [DDR4 PC4-28800 16GB 2枚組]が2万円。 これは安い。私が作ったときの半額くらいか。 普通に欲しい。
-SSD MX500が7000円。安い。 そもそも128GBでも困っていないのだが。 最近はPCIeスロットに指すタイプも出ており、1TBで1万2千円。 どれだけ早くなるんだろうか。欲しい。
+  はじめに Docker及びKubernetesについて断片的な知識しかないため、この本を読むことにした
+ Docker/Kubernetes 実践コンテナ開発入門
+目次 目次はこんな感じ。
+ Dockerの基礎 Dockerコンテナのデプロイ 実践的なコンテナの構築とデプロイ Swarmによる実践的なアプリケーション構築 Kubernetes入門 Kubernetesのデプロイ・クラスタ構築 Kubernetesの発展的な利用 コンテナの運用 より軽量なDockerイメージを作る Dockerの様々な活用方法  進捗 2章まで読み終わったとこ。実際に手を動かすことが多いので勉強にはなっている。この休みを利用して一通り終わらせたいと思っている。 やりたいことはたくさんあるので計画的に進めていきたい。
   </p>
 
   
@@ -254,13 +253,13 @@ SSD MX500が7000円。安い。 そもそも128GBでも困っていないのだ�
   
     <article>
   <header>
-    <h2><a href="https://tkconq.github.io/post/20190814/">シェルとか</a></h2>
+    <h2><a href="https://tkconq.github.io/post/20190809/">Circle CI</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Aug 2019, 11:09</time>
+    <time>09 Aug 2019, 08:50</time>
   </div>
 
   
@@ -274,25 +273,28 @@ SSD MX500が7000円。安い。 そもそも128GBでも困っていないのだ�
   </header>
 
   <p>
-  はじめに シェル遍歴についてのメモ
-bash デフォルトのshell。（拡張すればよいのだが）ところどころ不便なこともあってあまり使わなかった。
-fish 色々と便利だったが、bashと完全互換しているわけではなく、一部コマンドが使えなかったのでやめた。
-zsh oh-my-zshを入れて使っていた。一時期fishにしていたが結局これにもどってきた。
+  CircleCIとは クラウドのCI/CDのデファクトといっていいもの。GitHubと連携できるので相性が良い。（とはいえ今どきのCI/CDツールなら大抵連携できる)  Circle CIのイメージ   URL: https://circleci.com/
+blog運営に使うだけであれば無料枠で十分。 configの設定は以下の通り。 themesをsubmoduleで管理していたところ、circleci側でうまくgit cloneできずに少しハマった。とりあえず本体で管理する解決策で代用。特にテーマ変える予定もいまのところないしね。
+version: 2 jobs: build: docker: - image: cibuilds/hugo:latest steps: - checkout - run: name: &quot;Setting for Git&quot; command: | git config --global user.name &quot;&lt;yourname&gt;&quot; git config --global user.email &quot;&lt;yourname&gt;@gmail.com&quot; - run: name: &quot;Get GitHub repository&quot; command: git clone git@github.com:&lt;yourname&gt;/blog.git - run: name: &quot;Build &amp; Push&quot; command: | git clone --recursive git@github.com:&lt;yourname&gt;/&lt;yourname&gt;.github.io.git public hugo cd public ls git add .
   </p>
 
+  
+  <footer>
+    <a href="https://tkconq.github.io/post/20190809/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
   
     <article>
   <header>
-    <h2><a href="https://tkconq.github.io/post/20190813/">実家のWindowsが遅い</a></h2>
+    <h2><a href="https://tkconq.github.io/post/20190808/">Hugo &#43; GitHub Pagesでブログ作成した</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>13 Aug 2019, 11:02</time>
+    <time>08 Aug 2019, 23:04</time>
   </div>
 
   
@@ -306,70 +308,13 @@ zsh oh-my-zshを入れて使っていた。一時期fishにしていたが結局
   </header>
 
   <p>
-  はじめに 実家に以前買ってあげたノートパソコンがめちゃくちゃ重い。 ディスク使用量が100%を常に出しており、これはヤバいと思ったので色々と対策。
-溜まっているWindows Updateを順次かける windows updateが無視され続けており、たまっていたのでたくさんかける。 途中で常にupdateが失敗するようになってしまい、Windowsの初期化をしてやり直す。 が、だめ。
-Windows 10　を最新にする Windows自体を手動アップデート。うまくいくかはわからないので様子見中
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://tkconq.github.io/post/20190812/">帰省</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>12 Aug 2019, 14:59</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  帰省します。 多少家が広くなるし、勉強に集中できる環境になるはず。
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://tkconq.github.io/post/20190811/">お盆休みにやること</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Aug 2019, 12:32</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  はじめに 10連休ほどもらえたのでこの休み中にやることをまとめる
-英語 しばらく休んでいたので基礎から。来月にはSkype英会話を再開できるレベルにはしておきたい。 一応仕事でまた使うことになりそうなのでヤバい。
- 英語耳 どんどん話すための瞬間英作文 スタディサプリEnglish  技術書 直近の記事で書いたけど、k8sの教科書を学ぶ。 勉強のモチベーションが下がっているのは、直近仕事で使わないからかな。
- Docker/Kubernetes実践コンテナ開発入門   そもそも 最近新しいことを学ぶ速度が落ちている気がする。 歳のせいか、なかなか頭に残らない。 もともと物覚えは悪い方なので学ぶ時間を増やさなきゃと思いつつ、なかなか重い腰が上がらない。 20代も残り少なくなってきたので、悔いの残らない人生にしないとな。
+  はじめに 普段からMarkdownで文章を書くことが多いため、blogもMarkdownで書きたいなと思った。 候補はいくつかあったが、とりあえずそこそこ王道であるHugoとGitHubを組み合わせて使うことにした
+Hugoとは Hugoは静的サイトジェネレーターである。記事をMarkdownで書くことができるのが魅力である。 記事の作成は以下のコマンドで行う
+hugo new posts/{title}  以下のコマンドを実行し、localにサーバーを立てて出力を確認しながら書いていく。
+hugo server  コンパイルは以下のコマンドで実行し、publicディレクトリ内に結果が出力される。
+hugo  なお、私はコンパイル自体は自動化しているのでこのコマンドをうつことはない
+GitHub Pagesとは GitHubの提供するWeb hosting serviceである。 GitにCommitするだけでWebが公開できるのである。なにそれ便利。 hugoで作成したpublicディレクトリをアップしてやればよい。 こちらも自動化しているので特に意識してはいない。
+時間があるときにここらへんの詳しい話をしたいと思う。
   </p>
 
   
@@ -382,11 +327,11 @@ Windows 10　を最新にする Windows自体を手動アップデート。う�
 
 <nav class="pagination" role="pagination">
   
-  <a href="https://tkconq.github.io/"><i class="fa fa-chevron-left"></i></a>
+  <a href="https://tkconq.github.io/page/2/"><i class="fa fa-chevron-left"></i></a>
   
-  <span>&nbsp;2 / 3&nbsp;</span>
+  <span>&nbsp;3 / 3&nbsp;</span>
   
-  <a href="https://tkconq.github.io/page/3/"><i class="fa fa-chevron-right"></i></a>
+  <i class="fa fa-chevron-right"></i>
   
 </nav>
 
