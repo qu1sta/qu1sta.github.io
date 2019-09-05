@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.57.2" />
+
+  <title>イチから理解するサーバーレスアプリ開発 &middot; メモを書いておくページ</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://tkconq.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://tkconq.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://tkconq.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://tkconq.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://tkconq.github.io/css/my.css">
+    
+  
+  
+    
+        <script src="https://tkconq.github.io/js/my.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://tkconq.github.io/">tkconq's memo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://tkconq.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://tkconq.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://tkconq.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/tkconq" rel="me" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/tkconq" rel="me" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; tkconq 2019. All rights reserved.</small>
+  </div>
+</div>
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>イチから理解するサーバーレスアプリ開発</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Sep 2019, 14:52</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  
+
+<h2 id="アジェンダ">アジェンダ</h2>
+
+<ul>
+<li>サーバーレスのおさらい</li>
+<li>エラー制御・監視の勘所</li>
+<li>サーバーレスアプリケーション向きのDB設計ベストプラクティス</li>
+</ul>
+
+<h2 id="サーバーレスのおさらい">サーバーレスのおさらい</h2>
+
+<ul>
+<li>サーバーレスとは
+
+<ul>
+<li>主要コンポーネントのおさらい</li>
+</ul></li>
+<li>リソースのエラー制御の基本</li>
+<li>サーバーレスにおけるDBの考え方</li>
+<li>パターンで考える</li>
+</ul>
+
+<h3 id="サーバーレス基本">サーバーレス基本</h3>
+
+<ul>
+<li>サーバレスはサーバの存在を意識しない
+
+<ul>
+<li>サーバ管理不要</li>
+<li>柔軟なスケーリング</li>
+<li>十二分に考慮された高可用性</li>
+<li>アイドル時のリソース確保不要</li>
+</ul></li>
+<li>サーバーレスアプリケーション
+
+<ul>
+<li>利用者がやること</li>
+<li>アプリケーション設計</li>
+<li>ロジック開発/DB設計</li>
+<li>監視・エラー制御</li>
+<li>クラウドがやること</li>
+<li>リソース管理</li>
+<li>再実行処理</li>
+<li>ログ管理</li>
+<li>サーバー保守</li>
+</ul></li>
+<li>Function as a Service: AWS Lambda
+
+<ul>
+<li>実行時に適切にインフラを確保して処理を実行</li>
+<li>Lambda関数はVPCでは遅かったが、改善された</li>
+</ul></li>
+<li>外部I/F
+
+<ul>
+<li>REST API: API Gateway</li>
+<li>GraphQL: AppSync</li>
+</ul></li>
+<li>処理ロジック
+
+<ul>
+<li>AWS Lambda</li>
+</ul></li>
+<li>データ管理
+
+<ul>
+<li>NoSQL: DynamoDB</li>
+<li>RDB: RDS/Aurora</li>
+<li>Queue: SQS</li>
+<li>File: S3</li>
+</ul></li>
+<li>認証: Cognito</li>
+<li>ストリーム
+
+<ul>
+<li>流入データ: Kinesis Data Stream</li>
+<li>流入ログ: Kinesis Firehose</li>
+</ul></li>
+<li>実践でよく使われるユースケースパターン
+
+<ul>
+<li><a href="https://aws.amazon.com/jp/serverless/patterns/serverless-pattern/">https://aws.amazon.com/jp/serverless/patterns/serverless-pattern/</a></li>
+</ul></li>
+</ul>
+
+<h3 id="リソース管理とエラー制御の基本">リソース管理とエラー制御の基本</h3>
+
+<ul>
+<li>エラー処理の基本の考えは処理リソースの単位(Function)でエラーを考慮する</li>
+<li>もう少し大きなスコープの場合はStep Functionを使う</li>
+</ul>
+
+<h3 id="サーバレスにおけるdbの考え方">サーバレスにおけるDBの考え方</h3>
+
+<ul>
+<li>大量のDB接続リクエストが来るとRDB側のリソースがパンクする。対策は
+
+<ul>
+<li>入り口でスロットリングする</li>
+<li>DB接続を制御する（コネクションプーリング）</li>
+<li>（おすすめ）分散型のDBを使う。DynamoDB</li>
+</ul></li>
+</ul>
+
+<h3 id="パターンで考える">パターンで考える</h3>
+
+<ul>
+<li>実践でよく使われるユースケースパターン
+
+<ul>
+<li><a href="https://aws.amazon.com/jp/serverless/patterns/serverless-pattern/">https://aws.amazon.com/jp/serverless/patterns/serverless-pattern/</a></li>
+</ul></li>
+<li>パターンの組み合わせが多い。</li>
+</ul>
+
+<h3 id="サーバーレス検討のきっかけと狙い">サーバーレス検討のきっかけと狙い</h3>
+
+<ul>
+<li>サーバレス実装が選択されたタイミング
+
+<ul>
+<li>新サービスの実装</li>
+<li>既存の仕組みへの機能追加</li>
+<li>既存処理の刷新</li>
+<li>既存アーキテクチャの最適化</li>
+</ul></li>
+</ul>
+
+<h2 id="エラー制御の勘所とモニタリング">エラー制御の勘所とモニタリング</h2>
+
+<ul>
+<li>AWS Lambdaのおさらい</li>
+<li>AWS Lambdaでのプログラミング</li>
+<li>仕組みを理解しよう</li>
+<li>エラー制御について</li>
+<li>AWS Lambdaをモデリング</li>
+</ul>
+
+<h3 id="aws-lambdaのおさらい">AWS Lambdaのおさらい</h3>
+
+<ul>
+<li>インフラのプロビジョニング不要</li>
+<li>自動でスケール</li>
+<li>価値に対する支払い</li>
+<li>AWS Lambdaのハンドラ
+
+<ul>
+<li>ハンドラが呼ばれることで実行される</li>
+</ul></li>
+<li>AWS Lambdaのプログラミングで気をつけること
+
+<ul>
+<li>ステートレス</li>
+<li>べき等</li>
+</ul></li>
+<li>logの出力方法
+
+<ul>
+<li>基本的には言語の標準出力</li>
+<li>Amazon CloudWatch Logsに書き出す</li>
+<li>Loggerなどログ出力ライブラリを使う</li>
+</ul></li>
+</ul>
+
+<h3 id="エラー制御についてのパターン">エラー制御についてのパターン</h3>
+
+<ul>
+<li>プログラミング内の制御構造
+
+<ul>
+<li>コード量が多くなると、Lambdaの起動が遅くなる</li>
+<li>どのコードブロックでエラーが起きたか発見が困難</li>
+</ul></li>
+<li>AWS Lambdaの制御
+
+<ul>
+<li>非同期だと勝手にリトライする。</li>
+<li>DLQは、リトライを尽くしてもエラーとなった時に未処理イベントが送信される</li>
+</ul></li>
+<li>サーバーレスのワークフローサービスを利用
+
+<ul>
+<li>LambdaがLambdaをオーケストレーションする</li>
+<li>AWS Step Functionsでワークフローを実装</li>
+</ul></li>
+<li>モニタリング、トレース、アラート</li>
+</ul>
+
+<h3 id="モニタリングについて">モニタリングについて</h3>
+
+<ul>
+<li>SaaSで監視も可能</li>
+<li>誰がモニタリングするのか
+
+<ul>
+<li>you build it, you run it</li>
+</ul></li>
+<li>AWSの監視サービス
+
+<ul>
+<li>Amazon CloudWath: Logs/Metrics</li>
+<li>AWS X-Ray; Traces</li>
+</ul></li>
+<li>サーバレスは多くの場合分散していて、個々のサービスを監視する必要あり</li>
+</ul>
+
+<p>##　サーバーレスアプリケーション向きのDB設計ベストプラクティス
+* サーバーレスアプリケーションとデータベースの種類
+* データベース設計プロセス
+* DynamoDBの設計シミュレーション</p>
+
+<h3 id="サーバーレスアプリケーションとデータベースの種類">サーバーレスアプリケーションとデータベースの種類</h3>
+
+<ul>
+<li>サーバーレスアプリケーションで頻出サービス
+
+<ul>
+<li>AWS Lambda</li>
+<li>Amazon Aurora</li>
+<li>Amazon RDS</li>
+<li>Amazon ElasticCache</li>
+<li>&hellip;</li>
+</ul></li>
+<li>Lambdaはスケールするので、同時接続数が増えてやがてRDBMSの最大同時接続数を超える</li>
+<li>Amazon DynamoDBで懸念事項を解決する
+<br /></li>
+</ul>
+
+<h3 id="dynamodbの知識とベストプラクティス">DynamoDBの知識とベストプラクティス</h3>
+
+<ul>
+<li>テーブルの数は最小限に留める</li>
+<li>Primary Key (Particion KeyまたはPK:SortKeyの複合)でデータを識別しアクセス
+
+<ul>
+<li>ScanまたはQuery等のAPIで操作</li>
+</ul></li>
+<li>グローバルセカンダリインデックスは元テーブルから非同期レプリケーションされる別テーブルのような存在</li>
+<li>1テーブルや1インデックスに復習種類のアイテムをもたせてもよいし、1属性に複数種類の値を入れて良い</li>
+</ul>
+
+<h3 id="rdbの設計プロセス">RDBの設計プロセス</h3>
+
+<ul>
+<li>業務分析と論理データモデリング</li>
+<li>物理データモデリング</li>
+<li>アプリ・SQL設計、実装</li>
+</ul>
+
+<h3 id="dynamodbの設計プロセス">DynamoDBの設計プロセス</h3>
+
+<ul>
+<li>業務分析とデータのモデリング</li>
+<li>アクセスパターン設計
+
+<ul>
+<li>「従業員情報をIDで検索する」など</li>
+</ul></li>
+<li>TableとIndex設計
+
+<ul>
+<li>ユースケースを満たせるテーブル及びインデックスのスキーマを設計する</li>
+</ul></li>
+<li>クエリ条件設計
+
+<ul>
+<li>クエリの詳細を設計、定義する</li>
+<li>ユースケースごとに利用するパラメータ、インデックス、検索条件などを書き出す</li>
+</ul></li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://tkconq.github.io/post/20190820/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://tkconq.github.io/post/20190820/">漫画で分かるデザイン思考</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'Your Disqus shortname';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://tkconq.github.io/js/ui.js"></script>
+<script src="https://tkconq.github.io/js/menus.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

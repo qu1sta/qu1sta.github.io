@@ -221,6 +221,39 @@
   
     <article>
   <header>
+    <h2><a href="https://tkconq.github.io/post/20190905/">イチから理解するサーバーレスアプリ開発</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Sep 2019, 14:52</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  アジェンダ  サーバーレスのおさらい エラー制御・監視の勘所 サーバーレスアプリケーション向きのDB設計ベストプラクティス  サーバーレスのおさらい  サーバーレスとは  主要コンポーネントのおさらい  リソースのエラー制御の基本 サーバーレスにおけるDBの考え方 パターンで考える  サーバーレス基本  サーバレスはサーバの存在を意識しない  サーバ管理不要 柔軟なスケーリング 十二分に考慮された高可用性 アイドル時のリソース確保不要  サーバーレスアプリケーション  利用者がやること アプリケーション設計 ロジック開発/DB設計 監視・エラー制御 クラウドがやること リソース管理 再実行処理 ログ管理 サーバー保守  Function as a Service: AWS Lambda  実行時に適切にインフラを確保して処理を実行 Lambda関数はVPCでは遅かったが、改善された  外部I/F  REST API: API Gateway GraphQL: AppSync  処理ロジック  AWS Lambda  データ管理  NoSQL: DynamoDB RDB: RDS/Aurora Queue: SQS File: S3  認証: Cognito ストリーム  流入データ: Kinesis Data Stream 流入ログ: Kinesis Firehose  実践でよく使われるユースケースパターン  https://aws.
+  </p>
+
+  
+  <footer>
+    <a href="https://tkconq.github.io/post/20190905/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://tkconq.github.io/post/20190820/">漫画で分かるデザイン思考</a></h2>
 
     <div class="post-meta">
@@ -338,36 +371,6 @@
 
   <p>
    アプリケーションとコンテナの粒度  1コンテナ1アプリケーションは間違い Each container should have only one concern  コンテナのポータビリティ  ポータビリティは完璧ではない Kernel・アーキテクチャの違いの影響あり ダイナミックリング multi-stage builds という仕組みあり  Dockerフレンドリーなアプリケーション  実行時引数として値を渡す 実行時引数が増えるとマッピング処理が増えたりCMDが複雑になる 設定ファイルとして渡す 昔流行った方法 特定の環境の設定ファイルをDockerイメージに閉じ込めるとポータビリティが狭まる。 アプリケーションの挙動を環境変数で制御する ちょっとした値の変更でDockerイメージをビルドする必要なし 設定ファイルに環境変数を埋め込む SpringFrameworkのpropertiesファイルとか。  永続化データをどう扱うか  Data Volume Dockerコンテナ内のディレクトリを永続化するための仕組み Data Volumeコンテナ データを持つだためだけのコンテナ  コンテナ配置戦略  Docker Swarm 複数のDockerホストを束ねてクラスタ化するためのツール  Compose: 複数のコンテナを使うDockerアプリの管理 Swarm: クラスタの構築や管理 Service: Swarm前提。クラスタ内のServiceを管理 Stack: Swarm前提。複数のServiceをまとめたアプリ全体の管理  Service シングルDockerホストであればdocker container runでやってた Swarmの場合はアプリを構成する一部のコンテナを制御するため単位 Stack 複数のServiceをグルーピングした単位   
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://tkconq.github.io/post/20190816/">KeyBoard</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>16 Aug 2019, 22:56</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  はじめに USキーボードにした。
-Introduction I bought US keyboard. It is first time for me to use US Keyboard.
   </p>
 
   
