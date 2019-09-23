@@ -6,10 +6,19 @@
     <description>Recent content on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 05 Sep 2019 14:52:43 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 21:31:58 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SA午後</title>
+      <link>https://tkconq.github.io/post/20190923/</link>
+      <pubDate>Mon, 23 Sep 2019 21:31:58 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20190923/</guid>
+      <description> 企業の主要業務パターン  販売管理業務  売掛: あとで代金を受取る約束で売ること 引当て:ものを準備すること  生産管理業務  部品表:製品が原材料と半製品によってどのように構成されているかを示す 所要量計算: 部品表を使って生産に必要な原材料と半製品を算出する  購買管理業務  納品日=発注+購入リードタイム 品物と納品書を受け入れる。注文した側は「受入」、物品を受注した側は「納品」 検収: 納品書、発注情報、受け入れた品物の３つを確認すること  物流管理業務  棚入れ：入荷実績を元に、在庫マスタを更新し、棚入れする原材料や製品などに棚番を割り当てる   </description>
+    </item>
     
     <item>
       <title>イチから理解するサーバーレスアプリ開発</title>
