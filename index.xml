@@ -6,10 +6,19 @@
     <description>Recent content on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; tkconq 2019. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 27 Sep 2019 15:03:12 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 11:51:39 +0900</lastBuildDate>
     
 	<atom:link href="https://tkconq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ES2015及びReact</title>
+      <link>https://tkconq.github.io/post/20191018/</link>
+      <pubDate>Fri, 18 Oct 2019 11:51:39 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20191018/</guid>
+      <description> ES2015 波括弧について  Import文の波括弧なしはexport defaultされているもの、ありは通常のimport 代入文は分割代入。同名のプロパティ値を代入する。  React  ReactはViewのみを担当 コンポーネントを組み合わせて画面を作る  props  データの受け渡し  state  今の状態を表すオブジェクト reducerはこれに変更を加える  React-redux  ReactとReduxをバインディングするライブラリ   Provider  Reactコンポーネント内でreact-reduxのconnect()関数を使えるようにする ラップしたコンポーネントにStore情報を渡す  connect  ReduxのstoreにReactがアクセスするための関数 store情報を渡さないexport default connect()(TodoApp) action createrのみを渡すexport default connect(null, actionCreators)(TodoApp) stateを直接渡すexport default connect(state =&amp;gt; state)(TodoApp) stateの一部情報を渡すexport default connect(mapStateToProps)(TodoApp) stateとactionの両方を渡すexport default connect(mapStateToProps, actionCreators)(TodoApp)  </description>
+    </item>
     
     <item>
       <title>アジャイル開発</title>
