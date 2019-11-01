@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.59.1" />
 
-  <title>お盆休みにやること &middot; メモを書いておくページ</title>
+  <title>無線アクセスネットワーク技術:2-2まで &middot; メモを書いておくページ</title>
 
   
   
@@ -205,7 +205,7 @@
 
 
 <div class="header">
-  <h1>お盆休みにやること</h1>
+  <h1>無線アクセスネットワーク技術:2-2まで</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -214,7 +214,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Aug 2019, 12:32</time>
+    <time>07 Oct 2019, 00:48</time>
   </div>
 
   
@@ -227,50 +227,95 @@
 
   
 
-<h1 id="はじめに">はじめに</h1>
-
-<p>10連休ほどもらえたのでこの休み中にやることをまとめる</p>
-
-<h2 id="英語">英語</h2>
-
-<p>しばらく休んでいたので基礎から。来月にはSkype英会話を再開できるレベルにはしておきたい。
-一応仕事でまた使うことになりそうなのでヤバい。</p>
+<h2 id="無線アクセス-インタフェース">無線アクセス・インタフェース</h2>
 
 <ul>
-<li>英語耳</li>
-<li>どんどん話すための瞬間英作文</li>
-<li>スタディサプリEnglish</li>
-</ul>
-
-<h2 id="技術書">技術書</h2>
-
-<p>直近の記事で書いたけど、k8sの教科書を学ぶ。
-勉強のモチベーションが下がっているのは、直近仕事で使わないからかな。</p>
+<li>通信ネットワークの構成
 
 <ul>
-<li>Docker/Kubernetes実践コンテナ開発入門
-<br /></li>
+<li>コアネットワークCNと無線アクセスネットワークRANから構成</li>
+<li>モバイル端末UEと基地局の無線インタフェースUuなどインタフェース統一されている</li>
+<li>W-CDMAではRANがRNCと基地局NodeBにより構成される。</li>
+<li>LTEはEPC,E-UTRANとUEから構成される</li>
+<li>W-CDMAのRANは二層構成、E-UTRANはeNodeBのみの単階層</li>
+<li>LTEは階層構造をへらすことで高速化している</li>
+</ul></li>
+<li>通信プロトコルのアーキテクチャ
+
+<ul>
+<li>３層のレイヤで構成</li>
+<li>RAN側をAS,CN側をNASと呼ぶ</li>
+<li>レイヤ3は通信回路の設定や移動管理を行うCN側のNAS部と無線制御を行うRAN側のAS部の機能から構成</li>
+<li>レイヤ２は対向するレイヤ2との間のデータ転送を担う</li>
+<li>レイヤ１は無線回線を使って伝送する。</li>
+</ul></li>
 </ul>
 
-<h2 id="そもそも">そもそも</h2>
+<h2 id="伝送方式">伝送方式</h2>
 
-<p>最近新しいことを学ぶ速度が落ちている気がする。
-歳のせいか、なかなか頭に残らない。
-もともと物覚えは悪い方なので学ぶ時間を増やさなきゃと思いつつ、なかなか重い腰が上がらない。
-20代も残り少なくなってきたので、悔いの残らない人生にしないとな。</p>
+<ul>
+<li>変復調方式：無線周波数で信号を送受信</li>
+<li>伝送路符号化方式：信号の誤りを検出・訂正・再送</li>
+<li>多元接続方式：伝送路を分け合って使用</li>
+<li>変復調方式と伝送特性
+
+<ul>
+<li>位相変移変調（BPSK,QPSK）</li>
+<li>直交振幅変調方式（16QAM,64QAM)</li>
+<li>位相変移変調（PSK）は2そう、４そう、８そうごとの位相変移を利用</li>
+<li>直交振幅変調（QAM)は送信信号に基準位相(I層)の信号と、相対的に90度位相の進んだ直交位相(Q層)の送信信号を用い送信情報に応じて各層それぞれの信号の振幅を変調して送信する</li>
+<li>QPSK等はBPSKに比べて情報量が数倍になるが、高い判定精度が必要になる。</li>
+</ul></li>
+<li>通信路符号化
+
+<ul>
+<li>通信品質確保のために、誤り訂正符号や自動再送要求方式などの技術が用いられる</li>
+<li>リアルタイム性が必要なら受信部だけで受信情報の誤り訂正を行う前方誤り訂正FEC方式の適用が一般的</li>
+<li>CRCなどの誤り検出手法を併用し、複合誤りを検出して再送を求めるARQが利用されることもある。</li>
+<li>バーストエラー（特定の伝送時間に集中的に発生する誤り）を時間軸上で分散させてランダム化して複合能力をあげるインタリーブ・でインタリーブ処理も併用される。</li>
+<li>リードソロモン符号</li>
+<li>ブロック符号の一種で、送信情報を多値データとして伝送路符号化する方式</li>
+<li>畳み込み符号</li>
+<li>注目しているビットからみた過去の一定区間の情報符号系列全体の情報を使って符号化する。</li>
+<li>ターボ符号</li>
+<li>シャノンの限界に近い通信容量を達成できる協力な符号。</li>
+<li>LDPC符号</li>
+</ul></li>
+</ul>
+
+<h2 id="多重化方式と多元接続伝送方式">多重化方式と多元接続伝送方式</h2>
+
+<ul>
+<li>複数の情報を共通の媒体に乗せる多重化技術と、複数のユーザで共通の電波を利用する多元接続技術が用いられる</li>
+<li>多重化方式：FDM, TDM, CDM, OFDM</li>
+<li>多元接続方式: FDMA, TDMA, CDMA, OFDMA,SC-FDMA</li>
+<li>CDMとCDMA
+
+<ul>
+<li>符号分割多重方式、符号分割多元接続方式</li>
+<li>データ変調された変調符号に、シンボル時間の整数分の１の周期の拡散符号で変調を行って広データに戻してから復調する</li>
+</ul></li>
+<li>OFDM,OFDMA及びSC-FDMA
+
+<ul>
+<li>高い周波数利用効率、マルチパス伝搬環境に強い特徴があり、WiMAXやLTEなどに採用されている</li>
+<li>OFDMは原理的に消費電力が増大してしまう</li>
+<li>SC-FDMAはOFDMの特徴を保持したシングルキャリアで伝送する方式。</li>
+</ul></li>
+</ul>
 
 
   
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://tkconq.github.io/post/20190810/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://tkconq.github.io/post/20190927/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://tkconq.github.io/post/20190810/">Docker/Kubernetes実践コンテナ入門</a>
+      <a href="https://tkconq.github.io/post/20190927/">アジャイル開発</a>
     </nav>
     
   </div>
@@ -280,13 +325,13 @@
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://tkconq.github.io/post/20190812/">帰省</a>
+      <a href="https://tkconq.github.io/post/20191008/">無線アクセスネットワーク技術:2-</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="https://tkconq.github.io/post/20190812/"><i class="fa fa-chevron-right"></i></a>
+    <a href="https://tkconq.github.io/post/20191008/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
