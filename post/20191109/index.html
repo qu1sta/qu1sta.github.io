@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.59.1" />
 
-  <title>メモを書いておくページ</title>
+  <title>ElasticSearch &middot; メモを書いておくページ</title>
 
   
   
@@ -39,9 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="メモを書いておくページ"
-    href='https://tkconq.github.io/index.xml' />
   
 
   
@@ -110,11 +107,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://tkconq.github.io/index.xml'><i
-          class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -213,17 +205,12 @@
 
 
 <div class="header">
-  <h1>メモを書いておくページ</h1>
-  <h2>技術的に気になることとか、勉強の記録とか</h2>
+  <h1>ElasticSearch</h1>
+  <h2></h2>
 </div>
-
 <div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://tkconq.github.io/post/">Posts</a></h2>
 
-    <div class="post-meta">
+  <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
@@ -238,18 +225,88 @@
 
 </div>
 
-  </header>
-
-  <p>
-  
-  </p>
-
-  
-</article>
-
   
 
+<h1 id="elasticsearch">ElasticSearch</h1>
+
+<ul>
+<li>オープンソースの全文検索エンジン</li>
+<li>RESTfullインタフェースで操作可能</li>
+<li>Elastic StackはElasticsearch関連製品の総称
+
+<ul>
+<li>Elasticsearch: ドキュメントを保存・検索</li>
+<li>Kibana: データ可視化</li>
+<li>Logstash: データソースからデータを取り込み・変換</li>
+<li>Beats: データソースからデータ取り込み</li>
+<li>X-pack: セキュリティ、モニタリング、ウォッチ、レポート、グラフ機能を拡張</li>
+</ul></li>
+<li>用語
+
+<ul>
+<li>Index: データベース</li>
+<li>Type: テーブル</li>
+<li>Document: レコード</li>
+</ul></li>
+</ul>
+
+<h2 id="kibana">Kibana</h2>
+
+<ul>
+<li>Elasticsearchにこいつでアクセスして良い感じに可視化できる。</li>
+</ul>
+
+<h2 id="logstash">LogStash</h2>
+
+<ul>
+<li>データを扱うところ、どんなデータをどのように加工して出力するかを設定する</li>
+<li>Kibanaで加工しやすくなる</li>
+</ul>
+
+
   
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://tkconq.github.io/post/20191105/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://tkconq.github.io/post/20191105/">ES2015</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'Your Disqus shortname';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
 
 
 </div>

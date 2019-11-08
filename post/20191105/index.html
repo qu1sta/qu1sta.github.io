@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.59.1" />
 
-  <title>メモを書いておくページ</title>
+  <title>ES2015 &middot; メモを書いておくページ</title>
 
   
   
@@ -39,9 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="メモを書いておくページ"
-    href='https://tkconq.github.io/index.xml' />
   
 
   
@@ -110,11 +107,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://tkconq.github.io/index.xml'><i
-          class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -213,21 +205,16 @@
 
 
 <div class="header">
-  <h1>メモを書いておくページ</h1>
-  <h2>技術的に気になることとか、勉強の記録とか</h2>
+  <h1>ES2015</h1>
+  <h2></h2>
 </div>
-
 <div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://tkconq.github.io/post/">Posts</a></h2>
 
-    <div class="post-meta">
+  <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>08 Nov 2019, 23:12</time>
+    <time>05 Nov 2019, 21:15</time>
   </div>
 
   
@@ -238,18 +225,87 @@
 
 </div>
 
-  </header>
-
-  <p>
-  
-  </p>
-
-  
-</article>
-
   
 
+<h1 id="es2015メモ">ES2015メモ</h1>
+
+<ul>
+<li>プリミティブ型とオブジェクト型のみ
+
+<ul>
+<li>プリミティブ型はimmutable、Number,String,Boolean,null,undefined,Symbol</li>
+<li>String型はテンプレートリテラルを使える。これはバッククオートで囲む</li>
+</ul></li>
+<li>null: 開発者が変数として利用できる</li>
+<li>undefined: 定義されてない</li>
+<li>symbol: ユニークになる。</li>
+<li>短絡論理or: options = options || {}</li>
+<li>アロー関数
+
+<ul>
+<li>functionを省略できる</li>
+<li>引数が一つなら（）を省略できる</li>
+<li>関数本体が一つの式からなる場合、｛｝とreturnを省略できる</li>
+<li>アロー関数ではthisを内部関数の内側で使える</li>
+</ul></li>
+<li>演算子
+
+<ul>
+<li>等価演算子: 文字列と数値の比較の場合、文字列を数値にしてくれる</li>
+<li>厳密等価演算子: オペランド同士が型変換されない</li>
+</ul></li>
+</ul>
+
+
   
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://tkconq.github.io/post/20191028/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://tkconq.github.io/post/20191028/">MCPC学習</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://tkconq.github.io/post/20191109/">ElasticSearch</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://tkconq.github.io/post/20191109/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'Your Disqus shortname';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
 
 
 </div>
