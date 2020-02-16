@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.64.1" />
 
   <title>Hugo &#43; GitHub Pagesでブログ作成した &middot; メモを書いておくページ</title>
 
@@ -225,40 +225,23 @@
 
 </div>
 
-  
-
-<h1 id="はじめに">はじめに</h1>
-
+  <h1 id="はじめに">はじめに</h1>
 <p>普段からMarkdownで文章を書くことが多いため、blogもMarkdownで書きたいなと思った。
 候補はいくつかあったが、とりあえずそこそこ王道であるHugoとGitHubを組み合わせて使うことにした</p>
-
 <h2 id="hugoとは">Hugoとは</h2>
-
 <p>Hugoは静的サイトジェネレーターである。記事を<code>Markdown</code>で書くことができるのが魅力である。
 記事の作成は以下のコマンドで行う</p>
-
 <pre><code>hugo new posts/{title}
-</code></pre>
-
-<p>以下のコマンドを実行し、localにサーバーを立てて出力を確認しながら書いていく。</p>
-
+</code></pre><p>以下のコマンドを実行し、localにサーバーを立てて出力を確認しながら書いていく。</p>
 <pre><code>hugo server
-</code></pre>
-
-<p>コンパイルは以下のコマンドで実行し、<code>public</code>ディレクトリ内に結果が出力される。</p>
-
+</code></pre><p>コンパイルは以下のコマンドで実行し、<code>public</code>ディレクトリ内に結果が出力される。</p>
 <pre><code>hugo
-</code></pre>
-
-<p>なお、私はコンパイル自体は自動化しているのでこのコマンドをうつことはない</p>
-
+</code></pre><p>なお、私はコンパイル自体は自動化しているのでこのコマンドをうつことはない</p>
 <h2 id="github-pagesとは">GitHub Pagesとは</h2>
-
 <p>GitHubの提供するWeb hosting serviceである。
 GitにCommitするだけでWebが公開できるのである。なにそれ便利。
 <code>hugo</code>で作成した<code>public</code>ディレクトリをアップしてやればよい。
 こちらも自動化しているので特に意識してはいない。</p>
-
 <p>時間があるときにここらへんの詳しい話をしたいと思う。</p>
 
 

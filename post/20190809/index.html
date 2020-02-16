@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.64.1" />
 
   <title>Circle CI &middot; メモを書いておくページ</title>
 
@@ -225,10 +225,7 @@
 
 </div>
 
-  
-
-<h2 id="circleciとは">CircleCIとは</h2>
-
+  <h2 id="circleciとは">CircleCIとは</h2>
 <p>クラウドのCI/CDのデファクトといっていいもの。GitHubと連携できるので相性が良い。（とはいえ今どきのCI/CDツールなら大抵連携できる)
 <figure class="center">
     <img src="https://tkconq.github.io/images/circleci_image.png" width="320"/> <figcaption>
@@ -237,11 +234,9 @@
 </figure>
 
 URL: <a href="https://circleci.com/">https://circleci.com/</a></p>
-
 <p>blog運営に使うだけであれば無料枠で十分。
 <code>config</code>の設定は以下の通り。
 <code>themes</code>を<code>submodule</code>で管理していたところ、circleci側でうまく<code>git clone</code>できずに少しハマった。とりあえず本体で管理する解決策で代用。特にテーマ変える予定もいまのところないしね。</p>
-
 <pre><code>version: 2
 jobs:
   build:
@@ -274,7 +269,6 @@ jobs:
             git push origin master
 
 </code></pre>
-
 
   
 <div class="prev-next-post pure-g">

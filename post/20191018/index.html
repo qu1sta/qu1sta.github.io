@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.64.1" />
 
   <title>ES2015及びReact &middot; メモを書いておくページ</title>
 
@@ -225,53 +225,37 @@
 
 </div>
 
-  
-
-<h2 id="es2015">ES2015</h2>
-
+  <h2 id="es2015">ES2015</h2>
 <h3 id="波括弧について">波括弧について</h3>
-
 <ul>
 <li>Import文の波括弧なしは<code>export default</code>されているもの、ありは通常のimport</li>
 <li>代入文は分割代入。同名のプロパティ値を代入する。</li>
 </ul>
-
 <h2 id="react">React</h2>
-
 <ul>
 <li>ReactはViewのみを担当</li>
 <li>コンポーネントを組み合わせて画面を作る</li>
 </ul>
-
 <h3 id="props">props</h3>
-
 <ul>
 <li>データの受け渡し</li>
 </ul>
-
 <h3 id="state">state</h3>
-
 <ul>
 <li>今の状態を表すオブジェクト</li>
 <li>reducerはこれに変更を加える</li>
 </ul>
-
 <h2 id="react-redux">React-redux</h2>
-
 <ul>
 <li>ReactとReduxをバインディングするライブラリ</li>
 <li></li>
 </ul>
-
 <h3 id="provider">Provider</h3>
-
 <ul>
 <li>Reactコンポーネント内でreact-reduxのconnect()関数を使えるようにする</li>
 <li>ラップしたコンポーネントにStore情報を渡す</li>
 </ul>
-
 <h3 id="connect">connect</h3>
-
 <ul>
 <li>ReduxのstoreにReactがアクセスするための関数</li>
 <li>store情報を渡さない<code>export default connect()(TodoApp)</code></li>

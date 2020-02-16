@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.64.1" />
 
   <title>３章’実践的なコンテナの構築とデプロイ &middot; メモを書いておくページ</title>
 
@@ -227,58 +227,85 @@
 
   <ul>
 <li>アプリケーションとコンテナの粒度
-
 <ul>
 <li>1コンテナ1アプリケーションは間違い</li>
 <li>Each container should have only one concern</li>
-</ul></li>
+</ul>
+</li>
 <li>コンテナのポータビリティ
-
 <ul>
 <li>ポータビリティは完璧ではない</li>
 <li>Kernel・アーキテクチャの違いの影響あり</li>
 <li>ダイナミックリング</li>
 <li>multi-stage builds という仕組みあり</li>
-</ul></li>
+</ul>
+</li>
 <li>Dockerフレンドリーなアプリケーション
-
 <ul>
-<li>実行時引数として値を渡す</li>
+<li>実行時引数として値を渡す
+<ul>
 <li>実行時引数が増えるとマッピング処理が増えたりCMDが複雑になる</li>
-<li>設定ファイルとして渡す</li>
+</ul>
+</li>
+<li>設定ファイルとして渡す
+<ul>
 <li>昔流行った方法</li>
 <li>特定の環境の設定ファイルをDockerイメージに閉じ込めるとポータビリティが狭まる。</li>
-<li>アプリケーションの挙動を環境変数で制御する</li>
+</ul>
+</li>
+<li>アプリケーションの挙動を環境変数で制御する
+<ul>
 <li>ちょっとした値の変更でDockerイメージをビルドする必要なし</li>
-<li>設定ファイルに環境変数を埋め込む</li>
+</ul>
+</li>
+<li>設定ファイルに環境変数を埋め込む
+<ul>
 <li>SpringFrameworkのpropertiesファイルとか。</li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>永続化データをどう扱うか
-
 <ul>
-<li>Data Volume</li>
+<li>Data Volume
+<ul>
 <li>Dockerコンテナ内のディレクトリを永続化するための仕組み</li>
-<li>Data Volumeコンテナ</li>
-<li>データを持つだためだけのコンテナ</li>
-</ul></li>
-<li>コンテナ配置戦略
-
+</ul>
+</li>
+<li>Data Volumeコンテナ
 <ul>
-<li>Docker Swarm</li>
+<li>データを持つだためだけのコンテナ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>コンテナ配置戦略
+<ul>
+<li>Docker Swarm
+<ul>
 <li>複数のDockerホストを束ねてクラスタ化するためのツール
-
 <ul>
 <li>Compose: 複数のコンテナを使うDockerアプリの管理</li>
 <li>Swarm: クラスタの構築や管理</li>
 <li>Service: Swarm前提。クラスタ内のServiceを管理</li>
 <li>Stack: Swarm前提。複数のServiceをまとめたアプリ全体の管理</li>
-</ul></li>
-<li>Service</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Service
+<ul>
 <li>シングルDockerホストであれば<code>docker container run</code>でやってた</li>
 <li>Swarmの場合はアプリを構成する一部のコンテナを制御するため単位</li>
-<li>Stack</li>
+</ul>
+</li>
+<li>Stack
+<ul>
 <li>複数のServiceをグルーピングした単位</li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 
