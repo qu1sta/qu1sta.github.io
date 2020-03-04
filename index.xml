@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>機械学習・深層学習による自然言語処理入門</title>
+      <link>https://tkconq.github.io/post/20200303/</link>
+      <pubDate>Tue, 03 Mar 2020 15:36:16 +0900</pubDate>
+      
+      <guid>https://tkconq.github.io/post/20200303/</guid>
+      <description>自然言語処理の基礎 形態素解析 構文解析 意味解析 テキスト分類 機械翻訳 情報抽出 非構造化データであるテキストを構造化された表現に変換する 質問応答 fa</description>
+    </item>
+    
+    <item>
       <title>記号読み方</title>
       <link>https://tkconq.github.io/post/20200229/</link>
       <pubDate>Sat, 29 Feb 2020 16:41:19 +0900</pubDate>
