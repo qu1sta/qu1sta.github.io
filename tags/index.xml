@@ -5,10 +5,6 @@
     <link>https://tkconq.github.io/tags/</link>
     <description>Recent content in Tags on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>&amp;copy; tkconq 2020. All rights reserved.</copyright>
-    
-	<atom:link href="https://tkconq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>&amp;copy; tkconq 2020. All rights reserved.</copyright><atom:link href="https://tkconq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
