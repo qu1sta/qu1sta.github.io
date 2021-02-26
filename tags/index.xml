@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on メモを書いておくページ</title>
-    <link>https://tkconq.github.io/tags/</link>
+    <link>https://qu1sta.github.io/tags/</link>
     <description>Recent content in Tags on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>&amp;copy; tkconq 2020. All rights reserved.</copyright><atom:link href="https://tkconq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; qu1sta 2020. All rights reserved.</copyright><atom:link href="https://qu1sta.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
