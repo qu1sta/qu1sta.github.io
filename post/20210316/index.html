@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="">
+  <meta name="generator" content="Hugo 0.81.0" />
+
+  <title>ボックスを表示するまで &middot; メモを書いておくページ</title>
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://qu1sta.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://qu1sta.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://qu1sta.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://qu1sta.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://qu1sta.github.io/">qu1sta</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://qu1sta.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://qu1sta.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://qu1sta.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/qu1sta" rel="me" target="_blank"><i
+          class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/qu1sta" rel="me" target="_blank"><i
+          class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+  <div>
+  <div class="small-print">
+    <small>&copy; qu1sta 2020. All rights reserved.</small>
+  </div>
+</div>
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>ボックスを表示するまで</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>16 Mar 2021, 17:49</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  <h1 id="環境">環境</h1>
+<ul>
+<li>Unity 2020.3.0f1 Personal</li>
+<li>※：Unity 2019とAndroid 11の場合は設定がいろいろと増えるので注意</li>
+</ul>
+<h2 id="パッケージのインストール">パッケージのインストール</h2>
+<p>Window &gt; Package Manager よりPackage Manager Windowを表示
+Packages: Unity Registoryに変更して以下をInstall</p>
+<ul>
+<li>AR Foundation 4.1.5</li>
+<li>ARCore XR Plugin 4.1.5</li>
+</ul>
+<h2 id="コンポーネント調整">コンポーネント調整</h2>
+<ul>
+<li>Main Camera削除</li>
+<li>XR -&gt; AR Session, AR Session Originを追加</li>
+</ul>
+<h2 id="平面表示">平面表示</h2>
+<ul>
+<li>XR -&gt; AR Default Planeを追加してPrefab化する。</li>
+<li>Hierarchyから AR Default Planeを削除</li>
+<li>AR Session OriginのAdd ComponentからAR Plane Managerを追加。</li>
+<li>Plane ManagerのPlane Prefabに上記のPrefabを追加</li>
+</ul>
+<h2 id="シーン名の変更">シーン名の変更</h2>
+<ul>
+<li>SampleSceneを別名保存でMainSceneにする。</li>
+<li>SampleSceneを削除</li>
+</ul>
+<h2 id="動作確認">動作確認</h2>
+<ul>
+<li>Build Settingsを開く</li>
+<li>Scenes In buildにMainSceneをドラッグアンドドロップ</li>
+<li>PlatformをAndroidに変更</li>
+<li>Player Settingsを開く</li>
+<li>Vulkan削除、Minimum APIを7.0にする。</li>
+<li>XR Plug-in ManagementのARCoreにチェックを入れる</li>
+</ul>
+<h2 id="rayの追加">Rayの追加</h2>
+<ul>
+<li>AR Session OriginにAR Raycast Managerを追加</li>
+<li>ARManager.csを作成</li>
+<li>AR Session OriginのComponentにDrag&amp;Drop
+<ul>
+<li>※ファイル名とクラス名が違うと「The script don&rsquo;t inherit a native class that can manage a script」エラーが発生。</li>
+<li>実行順序は次の通り: <a href="https://docs.unity3d.com/ja/2020.2/Manual/ExecutionOrder.html">https://docs.unity3d.com/ja/2020.2/Manual/ExecutionOrder.html</a></li>
+</ul>
+</li>
+<li>CubeのPrefabを作って「Raycast Prefab」にDrag&amp;Drop</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.Collections;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+<span style="color:#66d9ef">using</span> UnityEngine;
+<span style="color:#66d9ef">using</span> UnityEngine.XR.ARFoundation;
+<span style="color:#66d9ef">using</span> UnityEngine.XR.ARSubsystems;
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ARManager</span> : MonoBehaviour
+{
+    <span style="color:#75715e">// 生成するオブジェクト
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">    [SerializeField]</span> GameObject objectPrefab;
+    <span style="color:#66d9ef">private</span> ARRaycastManager raycastManager;
+    <span style="color:#66d9ef">private</span> List&lt;ARRaycastHit&gt; hits = <span style="color:#66d9ef">new</span> List&lt;ARRaycastHit&gt;();
+    
+
+    <span style="color:#75715e">// Start is called before the first frame update
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> Start()
+    {
+        raycastManager = GetComponent&lt;ARRaycastManager&gt;();
+    }
+
+    <span style="color:#75715e">// Update is called once per frame
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> Update()
+    {
+        <span style="color:#66d9ef">if</span>(Input.touchCount &gt; <span style="color:#ae81ff">0</span>)
+        {
+            Touch touch = Input.GetTouch(<span style="color:#ae81ff">0</span>);
+            <span style="color:#66d9ef">if</span>(touch.phase != TouchPhase.Ended)
+            {
+                <span style="color:#66d9ef">return</span>;
+            }
+            <span style="color:#66d9ef">if</span>(raycastManager.Raycast(touch.position,hits, TrackableType.All))
+            {
+                Instantiate(objectPrefab, hits[<span style="color:#ae81ff">0</span>].pose.position, hits[<span style="color:#ae81ff">0</span>].pose.rotation);
+            }
+        }
+    }
+}
+
+</code></pre></div><h2 id="debugの設定">Debugの設定</h2>
+<ul>
+<li>Package Managerから以下をインストール</li>
+<li>Android Logcat 1.2.1</li>
+<li>Window &gt; Analysis &gt; Android Logcat</li>
+</ul>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fqu1sta.github.io%2fpost%2f20210316%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fqu1sta.github.io%2fpost%2f20210316%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fqu1sta.github.io%2fpost%2f20210316%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fqu1sta.github.io%2fpost%2f20210316%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fqu1sta.github.io%2fpost%2f20210316%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fqu1sta.github.io%2fpost%2f20210316%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://qu1sta.github.io/post/20210307/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://qu1sta.github.io/post/20210307/">モバイルアプリフレームワーク比較</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://qu1sta.github.io/js/ui.js"></script>
+<script src="https://qu1sta.github.io/js/menus.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

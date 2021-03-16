@@ -6,7 +6,16 @@
     <description>Recent content on メモを書いておくページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; qu1sta 2020. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 07 Mar 2021 18:57:47 +0900</lastBuildDate><atom:link href="https://qu1sta.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Mar 2021 17:49:36 +0900</lastBuildDate><atom:link href="https://qu1sta.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ボックスを表示するまで</title>
+      <link>https://qu1sta.github.io/post/20210316/</link>
+      <pubDate>Tue, 16 Mar 2021 17:49:36 +0900</pubDate>
+      
+      <guid>https://qu1sta.github.io/post/20210316/</guid>
+      <description>環境 Unity 2020.3.0f1 Personal ※：Unity 2019とAndroid 11の場合は設定がいろいろと増えるので注意 パッケージのインストール Window &amp;gt; Package Manager よりPackage</description>
+    </item>
+    
     <item>
       <title>モバイルアプリフレームワーク比較</title>
       <link>https://qu1sta.github.io/post/20210307/</link>
